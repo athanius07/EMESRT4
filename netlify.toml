@@ -1,11 +1,8 @@
 
-# Netlify configuration
+# Netlify configuration (fixed)
 [functions]
   node_bundler = "esbuild"
   directory = "netlify/functions"
-
-[[edge_functions]]
-  function = ""
 
 [build]
   publish = "site"
@@ -16,7 +13,6 @@
   name = "refresh"
   cron = "0 0 * * 1"
 
-# Ensure @netlify/blobs is bundled for functions
 [functions.emesrt]
   included_files = []
 
