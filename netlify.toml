@@ -1,0 +1,24 @@
+
+# Netlify configuration
+[functions]
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
+
+[[edge_functions]]
+  function = ""
+
+[build]
+  publish = "site"
+  command = ""
+
+# Scheduled function (weekly): Monday 00:00 UTC
+[[scheduled.functions]]
+  name = "refresh"
+  cron = "0 0 * * 1"
+
+# Ensure @netlify/blobs is bundled for functions
+[functions.emesrt]
+  included_files = []
+
+[functions.refresh]
+  included_files = []

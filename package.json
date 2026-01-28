@@ -1,0 +1,10 @@
+{
+  "name": "emesrt-l7l8l9-tracker",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/functions": "^2.6.0",
+    "@netlify/blobs": "^6.6.0"
+  }
+}

@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EMESRT L7/L8/L9 Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>EMESRT L7/L8/L9 Tracker</h1>
+    <p class="hint">Toggle categories and click <b>Load</b>. Use <b>Download CSV</b> for export. Switch <b>Use cached (scheduled)</b> on to serve the weekly refreshed dataset from Netlify Blobs.</p>
+    <div class="controls">
+      <label><input type="checkbox" id="mandates" checked> Government mandates</label>
+      <label><input type="checkbox" id="subnational" checked> Sub‑national guidance</label>
+      <label><input type="checkbox" id="frameworks" checked> Industry frameworks</label>
+      <label class="cached"><input type="checkbox" id="cached" checked> Use cached (scheduled)</label>
+      <button id="loadBtn">Load</button>
+      <button id="csvBtn" class="primary">Download CSV</button>
+    </div>
+    <div id="meta" class="meta">Generated: <span id="generated">–</span> · Rows: <span id="rows">–</span></div>
+    <div class="table-wrap">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th>Jurisdiction</th>
+            <th>Country</th>
+            <th>Category</th>
+            <th>Level(s)</th>
+            <th>Vehicles</th>
+            <th>Year</th>
+            <th>Document</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"><tr><td colspan="7" class="nodata">No data</td></tr></tbody>
+      </table>
+    </div>
+
+    <details class="notes">
+      <summary>Per‑jurisdiction notes</summary>
+      <div id="notes"></div>
+    </details>
+
+    <details>
+      <summary>Changelog</summary>
+      <pre id="changelog" class="changelog"></pre>
+    </details>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
